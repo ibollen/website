@@ -1679,12 +1679,12 @@
     <Compile Include="MasterPage\Web.Master.designer.cs">
       <DependentUpon>Web.Master</DependentUpon>
     </Compile>
-    <Compile Include="MasterPage\About.Master.cs">
-      <DependentUpon>About.Master</DependentUpon>
+    <Compile Include="MasterPage\NonAside.Master.cs">
+      <DependentUpon>NonAside.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MasterPage\About.Master.designer.cs">
-      <DependentUpon>About.Master</DependentUpon>
+    <Compile Include="MasterPage\NonAside.Master.designer.cs">
+      <DependentUpon>NonAside.Master</DependentUpon>
     </Compile>
     <Compile Include="ProductList.aspx.cs">
       <DependentUpon>ProductList.aspx</DependentUpon>
@@ -1735,7 +1735,7 @@
     <None Include="ckeditor\.htaccess" />
     <None Include="ckfinder\plugins\fileeditor\codemirror\LICENSE" />
     <None Include="ckfinder\userfiles\.htaccess" />
-    <Content Include="MasterPage\About.Master" />
+    <Content Include="MasterPage\NonAside.Master" />
     <Content Include="MasterPage\Main.Master" />
     <Content Include="MasterPage\Web.Master" />
   </ItemGroup>

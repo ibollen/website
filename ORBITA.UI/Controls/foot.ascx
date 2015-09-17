@@ -24,9 +24,9 @@
                 <li>Address:</li>
                 <li>5th Floor,Bldg B8,Xiufeng Industrial zone,</li>
                 <li>Buji,Longgang Dist,ShenZhen,China.</li>
-                <li>Tel: 0086-755-83369158-606</li>
-                <li>Fax: 0086-755-83617778</li>
-                <li>Email: joshua@orbitatech.com</li>
+                <li>Tel: +8618928480199</li>
+                <li>Fax: +8675583617778</li>
+                <li>Email: sales@orbitatech.com</li>
             </ul>
         </div>
 
@@ -43,7 +43,7 @@
 <!-- ####################################################################################################### -->
 <div class="wrapper col6">
     <div id="copyright">
-        <p class="fl_left">Copyright &copy; ORBITA 2014 All Rights Reserved. </p>
+        <p class="fl_left">Copyright &copy; ORBITA 2015 All Rights Reserved. </p>
         <br class="clear" />
     </div>
 </div>

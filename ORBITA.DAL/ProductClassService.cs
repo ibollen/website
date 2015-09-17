@@ -22,7 +22,7 @@ namespace ORBITA.DAL
             ()
         {
             ProductClassCollection list = null;
-            string sql = "SELECT * FROM T_ProductClass";
+            string sql = "SELECT * FROM t_productclass";
             MySqlDataReader reader = DbHelper.ExecuteDataReader(sql);
             if (reader.HasRows)
             {
@@ -49,14 +49,14 @@ namespace ORBITA.DAL
 
             if (parent_id > 0)
             {
-                sql = "SELECT * FROM T_ProductClass WHERE Parent_Id=?Parent_Id ORDER BY PC_Order, PC_Id";
+                sql = "SELECT * FROM t_productclass WHERE Parent_Id=?Parent_Id ORDER BY PC_Order, PC_Id";
                 parms = new MySqlParameter[] { new MySqlParameter("?Parent_Id", MySqlDbType.Int32) };
                 parms[0].Value = parent_id;
                 
             }
             else
             {
-                sql = "SELECT * FROM T_ProductClass WHERE Parent_Id IS NULL ORDER BY PC_Order, PC_Id";
+                sql = "SELECT * FROM t_productclass WHERE Parent_Id IS NULL ORDER BY PC_Order, PC_Id";
             }
 
             MySqlDataReader reader = DbHelper.ExecuteDataReader(sql, parms);
@@ -79,7 +79,7 @@ namespace ORBITA.DAL
         public static ProductClass GetItem(int pc_id)
         {
             ProductClass myProductClass = new ProductClass();
-            string sql = "SELECT * FROM T_ProductClass WHERE PC_Id=?PC_Id";
+            string sql = "SELECT * FROM t_productclass WHERE PC_Id=?PC_Id";
             MySqlParameter[] parms = { new MySqlParameter("?PC_Id", MySqlDbType.Int32)};
             parms[0].Value = pc_id;
             MySqlDataReader reader = DbHelper.ExecuteDataReader(sql, parms);
@@ -106,9 +106,9 @@ namespace ORBITA.DAL
 	                        where parent_Id is null 
 	                        union all 
 	                        select p.pc_id,p.pc_name,p.parent_id,depth+1,concat(sort , ', ' , right(concat('0000' , cast(p.pc_order as char(50))),4)) 
-	                        from T_ProductClass p 
+	                        from t_productclass p 
 	                        inner join (select pc_id, pc_name, parent_id, 0 as depth,right(concat('0000' , cast(pc_order as char(50))),4) as sort 
-	                        from T_ProductClass where Parent_Id is null) t on p.Parent_Id = t.pc_id 
+	                        from t_productclass where Parent_Id is null) t on p.Parent_Id = t.pc_id 
 	                        order by sort;";
             return DbHelper.ExecuteDataSet(sql,"ProductClass");
 
@@ -123,12 +123,12 @@ namespace ORBITA.DAL
             int? parent_id = null;
             int order = 0;
             int pcid, pcorder;
-            string sql = "select parent_id from T_ProductClass where pc_id=?pc_id";
+            string sql = "select parent_id from t_productclass where pc_id=?pc_id";
             MySqlParameter[] parms = { new MySqlParameter("?pc_id", MySqlDbType.Int32) };
             parms[0].Value = pc_id;
             parent_id = DbHelper.ExecuteScalar(sql, parms) as int?;
 
-            sql = "delete from T_ProductClass where pc_id=?pc_id";
+            sql = "delete from t_productclass where pc_id=?pc_id";
             MySqlParameter[] parms2 = { new MySqlParameter("?pc_id",MySqlDbType.Int32) };
             parms2[0].Value = pc_id;
             result = DbHelper.ExecuteNonQuery(sql, parms2);
@@ -139,11 +139,11 @@ namespace ORBITA.DAL
                 MySqlParameter[] parms3 = null;
                 if (parent_id == null)
                 {
-                    sql = "select pc_id,pc_order from T_ProductClass where parent_id is null order by pc_order";
+                    sql = "select pc_id,pc_order from t_productclass where parent_id is null order by pc_order";
                 }
                 else
                 {
-                    sql = "select pc_id,pc_order from T_ProductClass where parent_id=?parent_id order by pc_order";
+                    sql = "select pc_id,pc_order from t_productclass where parent_id=?parent_id order by pc_order";
                     parms3 = new MySqlParameter[] { new MySqlParameter("?parent_id", MySqlDbType.Int32) };
                     parms3[0].Value = parent_id;
                 }
@@ -158,7 +158,7 @@ namespace ORBITA.DAL
 
                     order = order + 1;
 
-                    sql = "update T_ProductClass set pc_order = ?pc_order where pc_id = ?pc_id";
+                    sql = "update t_productclass set pc_order = ?pc_order where pc_id = ?pc_id";
                     MySqlParameter[] params3 = { new MySqlParameter("?pc_order",MySqlDbType.Int32),
                                                  new MySqlParameter("?pc_id",MySqlDbType.Int32)
                                                };
@@ -181,7 +181,7 @@ namespace ORBITA.DAL
         public static bool Update(ProductClass myProductClass)
         {
             int result = 0;
-            string sql = "update T_ProductClass set pc_name = ?pc_name where pc_id = ?pc_id";
+            string sql = "update t_productclass set pc_name = ?pc_name where pc_id = ?pc_id";
             MySqlParameter[] parms = { 
                                         new MySqlParameter("?pc_name",MySqlDbType.VarChar),
                                         new MySqlParameter("?pc_id",MySqlDbType.Int32)
@@ -214,11 +214,11 @@ namespace ORBITA.DAL
             MySqlParameter[] parms = null;
             if (parent_id == null)
             {
-                sql1 = "select count(*) from T_ProductClass where parent_id is null";
+                sql1 = "select count(*) from t_productclass where parent_id is null";
             }
             else
             {
-                sql1 = "select count(*) from T_ProductClass where parent_id = ?Parent_id";
+                sql1 = "select count(*) from t_productclass where parent_id = ?Parent_id";
                 parms = new MySqlParameter[] { 
                     new MySqlParameter("?Parent_id",MySqlDbType.Int32),
                 };
@@ -231,7 +231,7 @@ namespace ORBITA.DAL
             MySqlParameter[] params2 = null;
             if (parent_id == null)
             {
-                sql2 = "insert into T_ProductClass(pc_name,pc_order) values (?pc_name,?pc_order)";
+                sql2 = "insert into t_productclass(pc_name,pc_order) values (?pc_name,?pc_order)";
                 params2 = new MySqlParameter[]{ 
                                           new MySqlParameter("?pc_name",MySqlDbType.VarChar),
                                           new MySqlParameter("?pc_order",MySqlDbType.Int32)
@@ -241,7 +241,7 @@ namespace ORBITA.DAL
             }
             else
             {
-                sql2 = "insert into T_ProductClass(pc_name,parent_id,pc_order) values (?pc_name,?parent_id,?pc_order)";
+                sql2 = "insert into t_productclass(pc_name,parent_id,pc_order) values (?pc_name,?parent_id,?pc_order)";
                 params2 = new MySqlParameter[]{ 
                                           new MySqlParameter("?pc_name",MySqlDbType.VarChar),
                                           new MySqlParameter("?parent_id",MySqlDbType.Int32),

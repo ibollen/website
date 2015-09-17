@@ -49,7 +49,7 @@ namespace ORBITA.DAL
         public static UserCollection GetList()
         {
             UserCollection list = new UserCollection();
-            string sql = "select * from T_Users";
+            string sql = "select * from t_users";
             MySqlDataReader reader = DbHelper.ExecuteDataReader(sql);
             if (reader.HasRows)
             {
@@ -77,13 +77,13 @@ namespace ORBITA.DAL
 
             if (myUser.UID > 0)
             {
-                sql = "select * from T_Users where uid=?uid";
+                sql = "select * from t_users where uid=?uid";
                 parms = new MySqlParameter[] { new MySqlParameter("?uid", MySqlDbType.Int32) };
                 parms[0].Value = myUser.UID;
             }
             else if(!string.IsNullOrEmpty(myUser.UserName) && !string.IsNullOrEmpty(myUser.Pwd))
             {
-                sql = "select * from T_Users where username=?username and password=?pwd";
+                sql = "select * from t_users where username=?username and password=?pwd";
                 parms = new MySqlParameter[] { 
                                                 new MySqlParameter("?username",MySqlDbType.VarChar),
                                                 new MySqlParameter("?pwd",MySqlDbType.VarChar)
@@ -93,7 +93,7 @@ namespace ORBITA.DAL
             }
             else
             {
-                sql = "select * from T_Users where username=?username";
+                sql = "select * from t_users where username=?username";
                 parms = new MySqlParameter[] { new MySqlParameter("?username", MySqlDbType.VarChar) };
                 parms[0].Value = myUser.UserName;
             }
@@ -123,7 +123,7 @@ namespace ORBITA.DAL
         public static bool Delete(int uid)
         {
             int result = 0;
-            string sql = "delete from T_Users where uid=?uid";
+            string sql = "delete from t_users where uid=?uid";
             MySqlParameter[] parms = { new MySqlParameter("?uid", MySqlDbType.Int32) };
             parms[0].Value = uid;
             result = DbHelper.ExecuteNonQuery(sql, parms);
@@ -145,7 +145,7 @@ namespace ORBITA.DAL
 
             if (!string.IsNullOrEmpty(myUser.Pwd))
             {
-                sql = "update T_Users set password=?pwd where uid=?uid";
+                sql = "update t_users set password=?pwd where uid=?uid";
                 parms = new MySqlParameter[]{   
                                                  new MySqlParameter("?pwd",MySqlDbType.VarChar),
                                                  new MySqlParameter("?uid",MySqlDbType.Int32)
@@ -155,7 +155,7 @@ namespace ORBITA.DAL
             }
             else
             {
-                sql = "update T_Users set login_ip=?login_ip, login_date=?login_date where uid=?uid";
+                sql = "update t_users set login_ip=?login_ip, login_date=?login_date where uid=?uid";
                 parms = new MySqlParameter[] { 
                                                  new MySqlParameter("?login_ip",MySqlDbType.VarChar),
                                                  new MySqlParameter("?login_date",MySqlDbType.Date),
@@ -178,7 +178,7 @@ namespace ORBITA.DAL
         public static bool Insert(User myUser)
         {
             int result = 0;
-            string sql = @"	INSERT INTO T_Users
+            string sql = @"	INSERT INTO t_users
 		                                (
 			                                username, 
 			                                password, 

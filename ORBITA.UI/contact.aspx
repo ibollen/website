@@ -1,54 +1,77 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/Web.Master" AutoEventWireup="true" CodeBehind="contact.aspx.cs" Inherits="ORBITA.UI.contact" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/NonAside.Master" AutoEventWireup="true" CodeBehind="contact.aspx.cs" Inherits="ORBITA.UI.contact" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="Stylesheet" href="css/web.css" type="text/css" />
 </asp:Content>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <input id="mynav" type="hidden" value="Service" />
-    <div class="side_box">
-        <%--<h2>Banner</h2>--%>
-        <div class="side_con">
-            <ul>
-                <li><a href="contact.aspx">Contact US</a></li>
-                <li><a href="service.aspx">Support</a></li>
-                <li><a href="download.aspx">Download</a></li>
-            </ul>
-        </div>
-    </div>
-</asp:Content>
-
-<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <input id="mynav" type="hidden" value="Contact Us" />
     <div id="mycontact">
         <ul>
             <li>
                 <h1><span>ORBITA (China)</span></h1>
-                <ul>
-                    <li>Address: &nbsp;5th floor,bldg b8,xiufeng industrial zone,buji, longgang dist,shenzhen,china</li>
-                    <li>Sales manager: &nbsp;joshua liu</li>
-                    <li>Tel: &nbsp;0086-755-83369158-606</li>
-                    <li>Fax: &nbsp;0086-755-83617778</li>
-                    <li>Mobile:	&nbsp;0086-13725547421</li>
-                    <li>Email: &nbsp;joshua@orbitatech.com</li>
-                    <li>Msn: &nbsp;joshua3385@orbitatech.com</li>
-                    <li>Skype: &nbsp;joshua3385</li>
-                    <li>Gmail: &nbsp;orbitalock.joshua@gmail.com</li>
-                    <li>Alibaba: &nbsp;cgs_joshua</li>
+                <div style="float:left; margin-right:100px;">
+                    <ul>
+                        <li><strong>Shenzhen office</strong></li>
+                        <li>Address: 5th Floor, Bldg B8,</li> 
+                        <li>Xiufeng Industrial Zone, </li>
+                        <li>Buji, Longgang Dist. Shenzhen, China</li> 
+                        <li>Tel:+8675583218909 </li>
+                        <li>Mobile:+8618928480199 </li>
+                        <li>Fax:+8675583617778 </li>                     
+                        <li>Skype:shudengpeng </li>
+                        <li>Email: sales@orbitatech.com</li>
+                    </ul>
+                </div>
+
+                <div style="float:left;">
+                    <ul>
+                        <li><strong>Huizhou factory</strong> </li>
+                        <li>Address: Orbita Industrial Park, </li>
+                        <li>Zhoukangwei, Changbu village, </li>
+                        <li>Xinxu Town, Huiyang Dist.Huizhou,</li> 
+                        <li>Guangdong Province, China</li>  
+                        <li>Tel:+867523633501 </li>
+                        <li>Mobile:+8618928480199 </li>
+                        <li>Fax:+867523633600 </li>
+                        <li>Skype:shudengpeng </li> 
+                        <li>Email: sales@orbitatech.com</li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <h1><span>ORBITA HOTEL SUPPLY(THAILAND) LTD.</span></h1>
+                <ul>    
+                    <li>Address:124/2 HALLMARK CHUMCHONLEKTIANG SUKHUMVIT 54, </li>     
+                    <li>YYEAK2-1  BANGCHAK PRAKHANONG, THAILAND </li>      
+                    <li>Contact: WATSON</li>      
+                    <li>Tel: 0850820440</li> 
+                    <li>Mobile: 0819008228 </li> 
+                    <li>Email: sales@orbitathai.com</li>
                 </ul>
             </li>
             <li>
-                <h1><span>Hotel Supply (Thailand) ltd.</span></h1>
+                <h1><span>ORBITA Cambodia Office</span></h1>
                 <ul>
-                    <li>Address: &nbsp;1000/25 pb tower 8th floor, sukhumvit 71,north klongtan, wattana, bangkok 10110</li>
-                    <li>Contact: &nbsp;mr.watson thanakul</li>
-                    <li>Tel: &nbsp;027133878</li>
-                    <li>Fax: &nbsp;027133879</li>
-                    <li>Mobile: &nbsp;0819008228</li>
-                    <li>Email: &nbsp;sales@orbitathai.com</li>
-                    <li>Msn: &nbsp;watson168@live.com</li>
-                    <li>Skype: &nbsp;watson.ken</li>
+                    <li>Address: #240, Street 101, Sangkat Beoung Trabek,</li> 
+                    <li>Khan Chamkarmorn, Phnom Penh, Cambodia.</li>
+                    <li>Contact: Mr. Yewkin Yang</li>
+                    <li>Mobile: +855 (0) 969 331 992</li>
                 </ul>
             </li>
+            <li>
+                 <h1><span>ORBITA Vietnam Office</span></h1>
+                <ul>
+                    <li>Hochiminh Show room:270B Lý Thường Kiệt, P. 6, Q. Tân Bình </li>
+                    <li>Tel: (08) 62922365 </li>     
+                    <li>Fax: (08) 62650965</li>
+
+                    <li>Da Nang Show room: 94 Điện Biên Phủ, Q.Thanh Khê, Đà Nẵng </li>
+                    <li>Tel: (0511) 3662886  (0511) 3662986</li>
+                </ul>
+            </li>
+
         </ul>
     </div>
 </asp:Content>

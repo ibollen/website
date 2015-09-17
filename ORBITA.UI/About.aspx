@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/About.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="ORBITA.UI.About" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/NonAside.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="ORBITA.UI.About" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="Stylesheet" href="css/web.css" type="text/css" />

@@ -8,8 +8,7 @@
     <div class="side_box">
         <%--<h2>Banner</h2>--%>
         <div class="side_con">
-            <ul>
-                <li><a href="contact.aspx">Contact us</a></li>
+            <ul>               
                 <li><a href="service.aspx">Support</a></li>
                 <li><a href="download.aspx">Download</a></li>
             </ul>

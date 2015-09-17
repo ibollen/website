@@ -27,7 +27,8 @@
             <li><a href="ArticleList.aspx">NEWS</a></li>
             <li><a href="ProductList.aspx?id=49">PRODUCTS</a></li>
             <li><a href="case.aspx">REFERENCES</a></li>
-            <li class="last"><a href="service.aspx">SERVICE</a></li>
+            <li><a href="service.aspx">SERVICE</a></li>
+            <li class="last"><a href="contact.aspx">CONTACT</a></li>
         </ul> 
     </div>
 	

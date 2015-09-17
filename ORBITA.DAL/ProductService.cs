@@ -119,7 +119,7 @@ namespace ORBITA.DAL
 
             ProductCollection list = null;
 
-            string sql = "select * from T_Product where IsTop=?IsTop and IsCommend=?IsCommend";
+            string sql = "select * from t_product where IsTop=?IsTop and IsCommend=?IsCommend";
             MySqlParameter[] parms = { 
                                         new MySqlParameter("?IsTop",MySqlDbType.Bit),
                                         new MySqlParameter("?IsCommend",MySqlDbType.Bit)
@@ -174,7 +174,7 @@ namespace ORBITA.DAL
         public static Product GetItem(int prod_id)
         {
             Product myProduct = new Product();
-            string sql = "select * from T_Product where prod_id=?prod_id";
+            string sql = "select * from t_product where prod_id=?prod_id";
             MySqlParameter[] parms = { new MySqlParameter("?prod_id", MySqlDbType.Int32) };
             parms[0].Value = prod_id;
             MySqlDataReader reader = DbHelper.ExecuteDataReader(sql, parms);
@@ -199,7 +199,7 @@ namespace ORBITA.DAL
         public static bool Delete(int prod_id)
         {
             int result = 0;
-            string sql = "delete from T_Product where prod_id=?prod_id";
+            string sql = "delete from t_product where prod_id=?prod_id";
             MySqlParameter[] parms = { new MySqlParameter("?prod_id", MySqlDbType.Int32) };
             parms[0].Value = prod_id;
             result = DbHelper.ExecuteNonQuery(sql, parms);
@@ -215,7 +215,7 @@ namespace ORBITA.DAL
         public static bool Update(int prod_id)
         {
             int result = 0;
-            string sql = "update T_Product set prod_click=prod_click+1 where prod_id=?prod_id";
+            string sql = "update t_product set prod_click=prod_click+1 where prod_id=?prod_id";
             MySqlParameter[] parms = { new MySqlParameter("?prod_id", MySqlDbType.Int32) };
             parms[0].Value = prod_id;
             result = DbHelper.ExecuteNonQuery(sql, parms);
@@ -231,7 +231,7 @@ namespace ORBITA.DAL
         public static bool Update(Product myProduct)
         {
             int result = 0;
-            string sql = @"update T_Product 
+            string sql = @"update t_product 
                           set 
                                 prod_name = ?prod_name, 
 		                        prod_number = ?prod_number, 
@@ -281,7 +281,7 @@ namespace ORBITA.DAL
         public static bool Insert(Product myProduct)
         {
             int result = 0;
-            string sql = @"insert into T_Product(         
+            string sql = @"insert into t_product(         
             			                            prod_name, 
 			                                        prod_number, 
 			                                        prod_price, 
