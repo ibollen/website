@@ -1,0 +1,516 @@
+﻿/* ---------------------------------------Contact---------------------------------*/
+#mycontact{
+	padding: 10px;
+}
+
+#mycontact ul{
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+
+#mycontact h1{
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid #2C589F;
+}
+
+#mycontact h1 span{
+	padding: 5px 10px 0 10px;
+	color: #FFFFFF;
+	background-color: #2C589F;
+}
+
+#mycontact ul li{
+	margin:0px 3px 20px 0px;
+}
+
+#mycontact ul li ul li{
+	margin: 10px;
+	font-size: 14px;
+}
+
+/* -------------------------------------Service-----------------------------------*/
+#myservice .top img{
+	margin: 20px 10px 20px 30px;
+	width: 650px;
+	height: 358px;
+}
+
+#myservice ul{
+	list-style: none;
+	font-size:12px;
+	padding:0 10px;
+}
+
+#myservice h1{
+	border-bottom:1px solid #2C589F;
+	margin:0;
+	padding:0;
+}
+
+#myservice h1 span{
+	padding: 5px 10px 0 10px;
+	color: #FFFFFF;
+	background-color: #2C589F;
+
+}
+
+
+#myservice .bottom div.left{
+	padding: 0 10px;
+	line-height: 20px;
+}
+
+#myservice .bottom div.left ul{
+	margin: 10px 0;
+}
+
+
+/*----------------------------------Download--------------------------------------*/
+#mydownload{
+	padding:10px;
+}
+#mydownload h1{
+	margin:0px;
+	padding: 0;
+	border-bottom: 1px solid #2C589F;
+}
+
+#mydownload h1 span{
+	padding: 5px 10px 0 10px;
+	color: #FFFFFF;
+	background-color: #2C589F;
+
+}
+
+#mydownload ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+#mydownload ul li{
+	padding:10px 10px;
+	font-size: 14px;
+	border-bottom: 1px dotted #CCCCCC;
+}
+
+#mydownload ul li a{
+	color: #000000;
+}
+
+#mydownload ul li a:hover {
+	color:#FF0000;
+	text-decoration:underline;
+}
+
+/*--------------------------------References----------------------------------------*/
+#myreferences{
+	padding: 10px;
+}
+
+#myreferences h1{
+	margin: 0;
+	padding: 0;	
+	border-bottom: 1px solid #2C589F;
+}
+
+#myreferences h1 span{
+	padding: 5px 10px 0 10px;
+	color: #FFFFFF;
+	background-color: #2C589F;
+}
+
+#myreferences ul{
+	list-style:none;
+}    
+
+#myreferences .box{
+       	margin: 15px auto;
+	padding:0px 15px;
+	position:relative; 
+}
+
+#myreferences .box li{ 
+	float: left; 
+	width: 200px; 
+	text-align: center; 
+/*	padding-right: 10px;i*/
+ 	margin-right: 15px; 
+	height: 90px; 
+	margin-bottom: 15px; 
+	cursor: pointer; 
+	z-index:0;
+	 position:relative;
+}
+
+#myreferences .box li img{ 
+	height: 90px; 
+	margin: 0 auto;
+}
+
+#myreferences .box li .in{
+	position: absolute; 
+	left: 0; top: 0;
+	width: 200px; 
+}
+
+#myreferences .box li .in p{ 
+	display: none;
+	text-align: left;
+}
+
+#myreferences .box li.on{
+	z-index:99;
+}
+
+#myreferences .box li.on .in{
+	padding: 5px; 
+	border: 1px solid #ccc; 
+	position:absolute;
+	z-index:100; 
+	width:auto; 
+	text-align: center; 
+	top:-40px;  
+	background: #fff;
+}
+
+#myreferences .box li.on .in p{
+	position:relative; 
+	display:block;
+}
+
+#myreferences .box li.on img{
+	height: auto;
+	margin-bottom: 8px;
+}
+
+#myreferences .bsc{
+	background:url(../images/icon01.png) no-repeat;
+	position:absolute; 
+	right:10px; 
+	width: 19px;
+ 	height: 15px;
+ 	font-size: 0;
+ 	float:right;
+}
+
+#myreferences ul.cases, #myreferences ul.cases li{
+	margin: 0;
+	padding: 0;
+}
+
+
+/*--------------------------------ProductList---------------------------------------*/
+
+/*table{
+	background:none;
+	margin: 5px;
+	border-collapse: collapse;
+	table-layout: auto;
+	width:98%;
+}
+
+td,th{
+	padding: 5px;
+}*/
+#productList h1{
+  font-size: 14px;
+  padding: 10px 0 0 0;
+  margin: 0 10px;
+  border-bottom: 1px solid #2C589F;
+}
+
+#productList h1 span{
+  background-color: #2C589F;
+  padding: 5px 10px 0 10px;
+  color: #FFFFFF;
+}
+
+#productList h1 a{
+	color: #FFFFFF;
+}
+
+#productList .list ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#productList .list ul.container{
+	padding-left:20px;
+}
+
+#productList .list ul li.items{
+	float:left;
+	margin: 15px 15px 0 0;
+}
+
+#productList .list ul.container li:hover ul{
+	border: 1px solid #2C589F;
+}
+
+#productList .list ul li.items ul{
+	border: 1px dashed #dbdbdb;
+	padding: 15px 0 0 0;
+}
+
+#productList .list ul li ul li.model{
+	margin: 8px 0 0 0;
+}
+
+#productList .info{
+	float:left;
+    width: 100%;
+    padding:0;
+	margin:0;
+    background: #fbfbfb;
+	font-size:11px;
+}
+#productList .info a{
+    text-decoration: underline;
+}
+
+#productList .info a.boldLink{
+    color: #000;
+    font-weight: bold;
+}
+#productList .info a.boldLink:hover{
+    color:#c00;
+}
+#productList .NodeName{
+    line-height: 18px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+
+#productList .imgProduct
+{
+    width: 150px;
+    height: 150px;
+}
+
+#productList .LabelStyle{
+	padding:5px;
+	color: #5E5E5E;
+	line-height: 25px;
+
+}
+
+
+
+/*----------------------------------------ProductInfo----------------------------------------*/
+#ProductInfo h1{
+  font-size: 14px;
+  padding: 10px 0 0 0;
+  margin: 0 10px;
+  color: #FFFFFF;
+  border-bottom: 1px solid #2C589F;
+}
+
+#ProductInfo h1 span{
+	padding: 5px 10px 0 10px;
+	background-color: #2C589F;
+}
+
+#ProductInfo h1 span a{
+	color: #FFFFFF;
+}
+
+#ProductInfo .title{
+	margin: 20px 0 20px 0;
+}
+
+#ProductInfo .title div{
+	float: left;
+}
+
+#ProductInfo .title .prod_image{
+	margin-left:30px;
+}
+
+#ProductInfo .title .prod_image .p_image{
+	width: 300px;
+	height: 300px;
+}
+
+#ProductInfo .title .prod_info{
+	width: 300px;
+	height: 200px;
+}
+
+#ProductInfo .title .prod_info ul{
+	list-style: none;
+}
+
+#ProductInfo .title .prod_info ul li{
+	margin-bottom: 10px;
+}
+
+#ProductInfo .title .prod_info ul li.tl{
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#ProductInfo .content{
+	padding: 10px 10px 20px 10px;
+	line-height: 20px;
+}
+
+/*--------------------------------------articlelist----------------------------------------*/
+#articlelist{
+	padding:10px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#articlelist h1{
+  font-size: 14px;
+  padding: 0 0 0 0;
+  margin: 0 0 10px 0;
+  border-bottom: 1px solid #2C589F;
+}
+
+#articlelist h1 span{
+	padding: 5px 10px 0 10px;
+	color: #FFFFFF;
+	background-color: #2C589F;
+}
+
+#articlelist h1 span a{
+	color: #FFFFFF;
+}
+
+#articlelist ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#articlelist ul li{
+	padding: 10px 0;
+	border-bottom: 1px dashed #dbdbdb;
+}
+
+#articlelist .artimg{
+	float: left;
+	height: 80px;
+	width: 140px;
+}
+
+
+
+#articlelist .artdigest{
+	float: left;
+	margin: 0 0 0 15px;
+	height: 80px;
+	width: 520px;
+}
+
+#articlelist .artdigest h1{
+	padding: 0;
+	margin: 0 0 3px 0;
+	font-size: 18px;
+	border: none;
+	color: #333333;
+}
+
+#articlelist .artdigest .title{
+	text-decoration: none;
+	color: #5E5E5E;
+}
+
+#articlelist .artdigest .title:hover{
+	text-decoration: underline;
+}
+
+#articlelist .artdigest .dsc{
+	line-height: 18px;
+	font-size: 12px;
+}
+
+
+/*--------------------------------------articleinfo----------------------------------------*/
+#articleinfo{
+	padding: 10px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#articleinfo h1{
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	border-bottom: 1px solid #2C589F;
+}
+
+#articleinfo h1 span{
+	color: #FFFFFF;
+	background-color: #2C589F;
+	padding: 5px 10px 0 10px;
+}
+
+#articleinfo h1 span a{
+	color: #FFFFFF;
+
+}
+
+#articleinfo h6{
+	text-align: center;
+	line-height: 40px;
+	border: none;
+	padding: 0;
+	margin: 20px 0 10px 0;
+	color: #333333;
+	font-weight: bold;
+}
+
+#articleinfo .smalltitle{
+	text-align: center;
+	font-size: 13px;
+}
+
+#articleinfo .artcontent{
+	margin: 18px 0;
+	padding: 0;
+}
+
+/*---------------------------------------MyCompany-----------------------------------------*/
+#mycompany{
+	padding:10px;
+}
+#mycompany h1{
+	margin:0;
+	padding:0;
+	border-bottom:1px solid #2C589F;
+}
+
+#mycompany .introduce .content{
+	padding: 10px 10px 10px 10px;
+	line-height: 20px;
+}
+#mycompany ul{
+	list-style:none;
+	height:100%;
+}
+
+#mycompany .cer .cerlist{
+	padding:10px 10px;
+}
+#mycompany .cer .cerlist > li{
+	float: left;
+	margin:0 33px 30px 0;
+}
+
+#mycompany .cer. ul li ul li{
+	margin-top: 30px;
+}
+
+/**************************AspNetPager Control************************/
+.paging{
+	margin:20px 0;
+	padding: 0 10px;
+}
+.anpager { margin: 0 0 0 5px;}
+.anpager .cpb {color:#c00; font-weight:bold; margin:5px 5px 0 0; padding:2px 5px;}
+.anpager a{padding:2px;}
